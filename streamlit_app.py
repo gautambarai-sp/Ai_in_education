@@ -13,8 +13,8 @@ st.set_page_config(page_title="AI in Education Analytics", layout="wide", initia
 # Load Data
 @st.cache_data
 def load_data():
-    prof_df = pd.read_csv('/mnt/user-data/outputs/ai_education_professor_data.csv')
-    student_df = pd.read_csv('/mnt/user-data/outputs/ai_education_student_data.csv')
+    prof_df = pd.read_csv('data/ai_education_professor_data.csv')
+    student_df = pd.read_csv('data/ai_education_student_data.csv')
     combined_df = pd.concat([prof_df, student_df], ignore_index=True)
     return prof_df, student_df, combined_df
 
